@@ -21,3 +21,9 @@ php artisan migrate
 ```
 npm install
 ```
+
+## Run the application
+
+```
+php artisan serve
+```
