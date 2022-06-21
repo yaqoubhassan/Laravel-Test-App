@@ -1,83 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+:root {
+  --main-color: #42b983;
+  --main-color-dark: #128652;
+}
+
+* {
+  font-family: "Open Sans", sans-serif;
+  box-sizing: border-box;
+  transition: all 0.3s ease-in;
+}
+
 body {
-    margin: 0;
-    font-family: "Lato", sans-serif;
-  }
-  
-.sidebar {
-    margin: 0;
-    padding: 0;
-    width: 200px;
-    background-color: #f1f1f1;
-    position: fixed;
-    height: 100%;
-    overflow: auto;
-    }
-
-.sidebar a {
-    display: block;
-    color: black;
-    padding: 16px;
-    text-decoration: none;
+  background: #f5f5f5;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
 }
-
-.sidebar a.active {
-    background-color: #0A58CA;
-    color: white;
-}
-
-.sidebar a:hover:not(.active) {
-    background-color: rgb(155, 198, 247);
-    color: white;
-}
-
-div.content {
-    margin-left: 200px;
-    padding: 1px 16px;
-    height: 1000px;
-}
-
-@media screen and (max-width: 700px) {
-    .sidebar {
-        width: 100%;
-        height: auto;
-        position: relative;
-    }
-    .sidebar a {float: left;}
-    div.content {margin-left: 0;}
-}
-
-@media screen and (max-width: 400px) {
-    .sidebar a {
-        text-align: center;
-        float: none;
-    }
-}
-
-.navbar {
-  overflow: hidden;
-  background-color: #333;
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
-.navbar a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
+a {
   text-decoration: none;
-  font-size: 17px;
 }
 
-.navbar a:hover {
-  background: #ddd;
-  color: black;
+button {
+  cursor: pointer;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+.extrabold {
+  font-weight: 800 !important;
+}
+.bold {
+  font-weight: 700;
+}
+.semibold {
+  font-weight: 600;
+}
+.regular {
+  font-weight: 400;
+}
+.light {
+  font-weight: 300;
 }
 
-.main {
-  padding: 16px;
-  margin-top: 30px;
-  height: 1500px; /* Used in this example to enable scrolling */
+input:not([type="checkbox"]),
+textarea {
+  width: 100%;
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  outline: none;
+  background: white;
 }
+input:not([type="checkbox"]),
+textarea,
+input:not([type="checkbox"])::placeholder,
+textarea::placeholder {
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Open Sans", sans-serif;
+}
+input:not([type="checkbox"]):focus {
+  border: 1px solid var(--main-color);
+}
+
+button[type="submit"] {
+  border: 0;
+  outline: 0;
+  padding: 10px 35px;
+  border-radius: 25px;
+  background: var(--main-color);
+  color: white;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background: var(--main-color-dark);
+}
+
+.card {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px 20px 5px;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border-top: 1px solid #ccc;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+.card-footer button {
+  background: transparent;
+  color: var(--main-color);
+  font-weight: 600;
+  font-size: 1rem;
+  border: 0;
+  outline: 0;
+}
+.card-footer button:hover {
+  color: var(--main-color-dark);
+}
+
+

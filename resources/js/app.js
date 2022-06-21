@@ -6,7 +6,26 @@
 
 require('./bootstrap');
 
+
 window.Vue = require('vue').default;
+
+import Vue from 'vue'
+import VueRouter from 'vue-router'
+import axios from 'axios'
+
+Vue.use(VueRouter)
+
+axios.defaults.baseURL = process.env.MIX_BASE_URL;
+
+let routes = [
+    { path: '/', component: require('./components/Home.vue').default },
+    { path: '/admin', component: require('./components/Admin.vue').default },
+]
+
+const router = new VueRouter({
+    mode: 'history',
+    routes 
+})
 
 /**
  * The following block of code may be used to automatically register your
@@ -29,4 +48,5 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 
 const app = new Vue({
     el: '#app',
+    router
 });
